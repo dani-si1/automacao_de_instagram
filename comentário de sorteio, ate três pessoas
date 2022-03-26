@@ -1,0 +1,78 @@
+#bibliotecas complementares
+import pyautogui 
+import pyperclip
+import time
+
+# Abrir e entra no site 
+
+pyautogui.PAUSE = 0.7 # commandos são rapidos, logo diminui a velocidade 
+pyautogui.hotkey('ctrl','t') # atalhoo do  teclado para abrir  uma nova aba
+
+link = "https://www.instagram.com/p/CbYHC_jOK1c/" # variavel  arrey para acessar o link diretamente no copy
+pyperclip.copy (link) # comando para copiar variavel 
+pyautogui.hotkey('ctrl','v') # comando do atalho colar
+pyautogui.press('enter') # preciona uma tecla 
+time.sleep(3)
+
+# Variaveis numericas para laços if-else e do-while 
+x=0
+n=0
+d=0.3 #variavel de controle de tempo 
+
+#laço de repetição 
+while x < 7 :
+    #laço direto da primeira repetição, codgo  mais simples para cortar o rolamento
+    if n == 0 :  
+        pyautogui.click(x=1149, y=779) # preciona um ponto com mouse 
+        pyautogui.press('@') # preciona uma tecla 
+        pyautogui.press('a')
+        time.sleep(1)
+        pyautogui.click(x=1179, y=823)
+        time.sleep(1)
+        pyautogui.press('@')
+        pyautogui.press('a')
+        time.sleep(1)
+        pyautogui.click(x=1212, y=887)
+        time.sleep(1)
+        pyautogui.press('@')
+        pyautogui.press('a')
+        time.sleep(1)
+        pyautogui.click(x=1197, y=981)
+        time.sleep(1)
+        pyautogui.click(x=1375, y=781)
+        time.sleep(4)
+        n = 1 + n # add um para ir para o else para o codgo mais complexo 
+    
+    else :
+        
+        pyautogui.click(x=1149, y=779)
+        pyautogui.press('@')
+        pyautogui.press('a')
+        time.sleep(2)
+        pyautogui.keyDown('down') # vai para baixo na marcação 
+        time.sleep(d)
+        pyautogui.keyUp('down')
+        time.sleep(1)
+        pyautogui.click(x=1179, y=823)
+        time.sleep(1)
+        pyautogui.press('@')
+        pyautogui.press('a')
+        time.sleep(2)
+        pyautogui.keyDown('down')
+        time.sleep(d)
+        pyautogui.keyUp('down')
+        time.sleep(1)
+        pyautogui.click(x=1212, y=887)
+        time.sleep(1)
+        pyautogui.press('@')
+        pyautogui.press('a')
+        time.sleep (2)
+        pyautogui.keyDown('down')
+        time.sleep(d)
+        pyautogui.keyUp('down')
+        time.sleep(1)
+        pyautogui.click(x=1197, y=981)
+        time.sleep(1)
+        pyautogui.click(x=1375, y=781)
+        time.sleep(4)@a
+        x = 1 + x #add 1 na repetição 
